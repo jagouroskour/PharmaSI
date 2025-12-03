@@ -44,10 +44,11 @@ namespace Sprint3
             // lblBienvenue
             // 
             this.lblBienvenue.AutoSize = true;
-            this.lblBienvenue.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblBienvenue.Location = new System.Drawing.Point(387, 179);
+            this.lblBienvenue.BackColor = System.Drawing.Color.Transparent;
+            this.lblBienvenue.Font = new System.Drawing.Font("Microsoft YaHei UI", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblBienvenue.Location = new System.Drawing.Point(571, 97);
             this.lblBienvenue.Name = "lblBienvenue";
-            this.lblBienvenue.Size = new System.Drawing.Size(33, 25);
+            this.lblBienvenue.Size = new System.Drawing.Size(39, 36);
             this.lblBienvenue.TabIndex = 0;
             this.lblBienvenue.Text = "...";
             // 
@@ -58,7 +59,7 @@ namespace Sprint3
             this.saisieToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(800, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(1166, 24);
             this.menuStrip1.TabIndex = 1;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -107,10 +108,11 @@ namespace Sprint3
             // 
             // btnDeconnexion
             // 
-            this.btnDeconnexion.BackColor = System.Drawing.Color.Red;
-            this.btnDeconnexion.Location = new System.Drawing.Point(39, 393);
+            this.btnDeconnexion.BackColor = System.Drawing.Color.OrangeRed;
+            this.btnDeconnexion.Font = new System.Drawing.Font("Microsoft YaHei", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDeconnexion.Location = new System.Drawing.Point(40, 487);
             this.btnDeconnexion.Name = "btnDeconnexion";
-            this.btnDeconnexion.Size = new System.Drawing.Size(107, 23);
+            this.btnDeconnexion.Size = new System.Drawing.Size(135, 45);
             this.btnDeconnexion.TabIndex = 2;
             this.btnDeconnexion.Text = "Se déconnecter";
             this.btnDeconnexion.UseVisualStyleBackColor = false;
@@ -120,14 +122,16 @@ namespace Sprint3
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.Lime;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.BackColor = System.Drawing.Color.White;
+            this.BackgroundImage = global::Sprint3.Properties.Resources.equipements_de_sante_et_fournitures_de_bureau_avec_plante_succulente_sur_fond_vert;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ClientSize = new System.Drawing.Size(1166, 605);
             this.Controls.Add(this.btnDeconnexion);
             this.Controls.Add(this.lblBienvenue);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "FrmVisiteur";
-            this.Text = "FrmVisiteur";
+            this.Text = " ";
             this.Load += new System.EventHandler(this.FrmVisiteur_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();

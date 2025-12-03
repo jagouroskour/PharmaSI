@@ -120,5 +120,10 @@ namespace Sprint3 // Vérifiez que cela correspond bien à votre projet
                 MessageBox.Show(ex.Message);
             }
         }
+
+        private void PictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
