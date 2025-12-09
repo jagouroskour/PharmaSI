@@ -32,5 +32,11 @@ namespace Sprint3
             FrmConsulter frm = new FrmConsulter();
             frm.ShowDialog();
         }
+
+        private void ficheDuProduitToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmConsulterMedicament frm = new FrmConsulterMedicament();
+            frm.ShowDialog();
+        }
     }
 }
