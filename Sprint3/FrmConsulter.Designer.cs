@@ -44,6 +44,8 @@ namespace Sprint3
             this.cboPraticiens = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.btnDeconnexion = new System.Windows.Forms.Button();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDetails)).BeginInit();
             this.SuspendLayout();
@@ -62,6 +64,8 @@ namespace Sprint3
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.Color.White;
+            this.groupBox1.Controls.Add(this.label9);
+            this.groupBox1.Controls.Add(this.label8);
             this.groupBox1.Controls.Add(this.label6);
             this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Controls.Add(this.label4);
@@ -73,7 +77,7 @@ namespace Sprint3
             this.groupBox1.Font = new System.Drawing.Font("Microsoft YaHei", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.Location = new System.Drawing.Point(90, 174);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(326, 191);
+            this.groupBox1.Size = new System.Drawing.Size(326, 236);
             this.groupBox1.TabIndex = 15;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Information générales";
@@ -81,7 +85,7 @@ namespace Sprint3
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(6, 157);
+            this.label6.Location = new System.Drawing.Point(6, 184);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(74, 17);
             this.label6.TabIndex = 9;
@@ -90,7 +94,7 @@ namespace Sprint3
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(6, 123);
+            this.label5.Location = new System.Drawing.Point(6, 121);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(43, 17);
             this.label5.TabIndex = 9;
@@ -135,7 +139,7 @@ namespace Sprint3
             // lblCoef
             // 
             this.lblCoef.AutoSize = true;
-            this.lblCoef.Location = new System.Drawing.Point(147, 157);
+            this.lblCoef.Location = new System.Drawing.Point(147, 183);
             this.lblCoef.Name = "lblCoef";
             this.lblCoef.Size = new System.Drawing.Size(17, 17);
             this.lblCoef.TabIndex = 6;
@@ -171,6 +175,7 @@ namespace Sprint3
             // 
             // cboPraticiens
             // 
+            this.cboPraticiens.BackColor = System.Drawing.SystemColors.ScrollBar;
             this.cboPraticiens.FormattingEnabled = true;
             this.cboPraticiens.Location = new System.Drawing.Point(542, 88);
             this.cboPraticiens.Name = "cboPraticiens";
@@ -203,6 +208,25 @@ namespace Sprint3
             this.btnDeconnexion.Text = " ";
             this.btnDeconnexion.UseVisualStyleBackColor = false;
             this.btnDeconnexion.Click += new System.EventHandler(this.btnDeconnexion_Click_1);
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(6, 153);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(88, 17);
+            this.label8.TabIndex = 10;
+            this.label8.Text = "Code Postal :";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(147, 153);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(17, 17);
+            this.label9.TabIndex = 11;
+            this.label9.Text = "...";
+            this.label9.Click += new System.EventHandler(this.Label9_Click);
             // 
             // FrmConsulter
             // 
@@ -246,5 +270,7 @@ namespace Sprint3
         private System.Windows.Forms.ComboBox cboPraticiens;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnDeconnexion;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label label8;
     }
 }
