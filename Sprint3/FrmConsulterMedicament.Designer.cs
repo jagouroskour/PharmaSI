@@ -50,7 +50,7 @@ namespace Sprint3
             this.cboMedicaments.BackColor = System.Drawing.SystemColors.ScrollBar;
             this.cboMedicaments.FormattingEnabled = true;
             this.cboMedicaments.Location = new System.Drawing.Point(415, 36);
-            this.cboMedicaments.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cboMedicaments.Margin = new System.Windows.Forms.Padding(2);
             this.cboMedicaments.Name = "cboMedicaments";
             this.cboMedicaments.Size = new System.Drawing.Size(182, 21);
             this.cboMedicaments.TabIndex = 0;
@@ -184,18 +184,18 @@ namespace Sprint3
             // dgvInteractions
             // 
             this.dgvInteractions.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvInteractions.Location = new System.Drawing.Point(362, 270);
-            this.dgvInteractions.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dgvInteractions.Location = new System.Drawing.Point(303, 257);
+            this.dgvInteractions.Margin = new System.Windows.Forms.Padding(2);
             this.dgvInteractions.Name = "dgvInteractions";
             this.dgvInteractions.RowHeadersWidth = 82;
             this.dgvInteractions.RowTemplate.Height = 33;
-            this.dgvInteractions.Size = new System.Drawing.Size(324, 88);
+            this.dgvInteractions.Size = new System.Drawing.Size(392, 120);
             this.dgvInteractions.TabIndex = 11;
             // 
             // button1
             // 
             this.button1.Location = new System.Drawing.Point(48, 391);
-            this.button1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button1.Margin = new System.Windows.Forms.Padding(2);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(64, 22);
             this.button1.TabIndex = 12;
@@ -223,7 +223,7 @@ namespace Sprint3
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.cboMedicaments);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "FrmConsulterMedicament";
             this.Text = "FrmConsulterMedicament";
             this.Load += new System.EventHandler(this.FrmConsulterMedicament_Load);
