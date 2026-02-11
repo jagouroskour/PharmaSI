@@ -64,14 +64,14 @@ namespace Sprint3
         private void ChargerProduits(ComboBox cbo)
         {
             maConnexionSql.OpenConnexion();
-            MySqlCommand cmd = maConnexionSql.reqExec("SELECT depot_legal, nom_commercial FROM produit");
+            MySqlCommand cmd = maConnexionSql.reqExec("SELECT id_medicament, nom_commercial FROM medicament");
             MySqlDataReader reader = cmd.ExecuteReader();
             DataTable dt = new DataTable();
             dt.Load(reader);
 
             cbo.DataSource = dt;
             cbo.DisplayMember = "nom_commercial";
-            cbo.ValueMember = "depot_legal";
+            cbo.ValueMember = "id_medicament";
             cbo.SelectedIndex = -1;
 
             reader.Close();
@@ -99,7 +99,7 @@ namespace Sprint3
                 int idPraticien = Convert.ToInt32(comboBox1.SelectedValue);
 
                 // 1. Insertion du rapport
-                string reqRapport = $"INSERT INTO rapport_visite (dateRapport, motif, bilan, idPraticien, idVisiteur) VALUES ('{dateVisite}', '{motif}', '{bilan}', {idPraticien}, {idVisiteurConnecte})";
+                string reqRapport = $"INSERT INTO rapport_visite (date_rapport, motif, bilan, id_praticien, id_visiteur) VALUES ('{dateVisite}', '{motif}', '{bilan}', {idPraticien}, {idVisiteurConnecte})";
                 MySqlCommand cmdRapport = maConnexionSql.reqExec(reqRapport);
                 cmdRapport.ExecuteNonQuery();
 
@@ -112,7 +112,7 @@ namespace Sprint3
                 {
                     string idProd1 = comboBox5.SelectedValue.ToString();
                     int qte1 = Convert.ToInt32(comboBox3.SelectedItem);
-                    MySqlCommand cmdProd1 = maConnexionSql.reqExec($"INSERT INTO offrir (idRapport, idMedicament, quantite) VALUES ({idRapport}, '{idProd1}', {qte1})");
+                    MySqlCommand cmdProd1 = maConnexionSql.reqExec($"INSERT INTO offrir (id_rapport, id_medicament, quantite) VALUES ({idRapport}, '{idProd1}', {qte1})");
                     cmdProd1.ExecuteNonQuery();
                 }
 
@@ -121,7 +121,7 @@ namespace Sprint3
                 {
                     string idProd2 = comboBox6.SelectedValue.ToString();
                     int qte2 = Convert.ToInt32(comboBox4.SelectedItem);
-                    MySqlCommand cmdProd2 = maConnexionSql.reqExec($"INSERT INTO offrir (idRapport, idMedicament, quantite) VALUES ({idRapport}, '{idProd2}', {qte2})");
+                    MySqlCommand cmdProd2 = maConnexionSql.reqExec($"INSERT INTO offrir (id_rapport, id_medicament, quantite) VALUES ({idRapport}, '{idProd2}', {qte2})");
                     cmdProd2.ExecuteNonQuery();
                 }
 
