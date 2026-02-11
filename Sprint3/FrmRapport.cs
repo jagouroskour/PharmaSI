@@ -156,7 +156,9 @@ namespace Sprint3
         // Bouton Se déconnecter
         private void BtnDeconnexion_Click(object sender, EventArgs e)
         {
-            this.DialogResult = DialogResult.OK;
+            this.Hide();
+            Form1 frmConnexion = new Form1(); // On utilise Form1 ici
+            frmConnexion.ShowDialog();
             this.Close();
         }
     }
