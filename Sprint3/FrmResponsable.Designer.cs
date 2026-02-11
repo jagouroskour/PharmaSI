@@ -44,9 +44,10 @@ namespace Sprint3
             this.lblBienvenue.AutoSize = true;
             this.lblBienvenue.BackColor = System.Drawing.Color.Transparent;
             this.lblBienvenue.Font = new System.Drawing.Font("Microsoft YaHei", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblBienvenue.Location = new System.Drawing.Point(587, 103);
+            this.lblBienvenue.Location = new System.Drawing.Point(1174, 198);
+            this.lblBienvenue.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.lblBienvenue.Name = "lblBienvenue";
-            this.lblBienvenue.Size = new System.Drawing.Size(39, 36);
+            this.lblBienvenue.Size = new System.Drawing.Size(75, 72);
             this.lblBienvenue.TabIndex = 0;
             this.lblBienvenue.Text = "...";
             this.lblBienvenue.Click += new System.EventHandler(this.lblBienvenue_Click);
@@ -55,9 +56,10 @@ namespace Sprint3
             // 
             this.btnDeconnexion.BackColor = System.Drawing.Color.OrangeRed;
             this.btnDeconnexion.Font = new System.Drawing.Font("Microsoft YaHei", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDeconnexion.Location = new System.Drawing.Point(64, 483);
+            this.btnDeconnexion.Location = new System.Drawing.Point(128, 929);
+            this.btnDeconnexion.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.btnDeconnexion.Name = "btnDeconnexion";
-            this.btnDeconnexion.Size = new System.Drawing.Size(123, 45);
+            this.btnDeconnexion.Size = new System.Drawing.Size(246, 87);
             this.btnDeconnexion.TabIndex = 11;
             this.btnDeconnexion.Text = "Se déconnecter";
             this.btnDeconnexion.UseVisualStyleBackColor = false;
@@ -65,11 +67,13 @@ namespace Sprint3
             // 
             // menuStrip1
             // 
+            this.menuStrip1.GripMargin = new System.Windows.Forms.Padding(2, 2, 0, 2);
+            this.menuStrip1.ImageScalingSize = new System.Drawing.Size(32, 32);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.consultationToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1166, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(2332, 46);
             this.menuStrip1.TabIndex = 12;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -80,39 +84,41 @@ namespace Sprint3
             this.ficheDuPraticienToolStripMenuItem,
             this.compterendusDuSecteurToolStripMenuItem});
             this.consultationToolStripMenuItem.Name = "consultationToolStripMenuItem";
-            this.consultationToolStripMenuItem.Size = new System.Drawing.Size(87, 20);
+            this.consultationToolStripMenuItem.Size = new System.Drawing.Size(170, 38);
             this.consultationToolStripMenuItem.Text = "Consultation";
             // 
             // ficheDuProduitToolStripMenuItem
             // 
             this.ficheDuProduitToolStripMenuItem.Name = "ficheDuProduitToolStripMenuItem";
-            this.ficheDuProduitToolStripMenuItem.Size = new System.Drawing.Size(216, 22);
+            this.ficheDuProduitToolStripMenuItem.Size = new System.Drawing.Size(436, 44);
             this.ficheDuProduitToolStripMenuItem.Text = "Fiche du produit";
+            this.ficheDuProduitToolStripMenuItem.Click += new System.EventHandler(this.ficheDuProduitToolStripMenuItem_Click);
             // 
             // ficheDuPraticienToolStripMenuItem
             // 
             this.ficheDuPraticienToolStripMenuItem.Name = "ficheDuPraticienToolStripMenuItem";
-            this.ficheDuPraticienToolStripMenuItem.Size = new System.Drawing.Size(216, 22);
+            this.ficheDuPraticienToolStripMenuItem.Size = new System.Drawing.Size(436, 44);
             this.ficheDuPraticienToolStripMenuItem.Text = "Fiche du praticien";
             this.ficheDuPraticienToolStripMenuItem.Click += new System.EventHandler(this.ficheDuPraticienToolStripMenuItem_Click_1);
             // 
             // compterendusDuSecteurToolStripMenuItem
             // 
             this.compterendusDuSecteurToolStripMenuItem.Name = "compterendusDuSecteurToolStripMenuItem";
-            this.compterendusDuSecteurToolStripMenuItem.Size = new System.Drawing.Size(216, 22);
+            this.compterendusDuSecteurToolStripMenuItem.Size = new System.Drawing.Size(436, 44);
             this.compterendusDuSecteurToolStripMenuItem.Text = "Compte-rendus du secteur";
             // 
             // FrmResponsable
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.BackgroundImage = global::Sprint3.Properties.Resources.equipements_de_sante_et_fournitures_de_bureau_avec_plante_succulente_sur_fond_vert;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1166, 597);
+            this.ClientSize = new System.Drawing.Size(2332, 1148);
             this.Controls.Add(this.btnDeconnexion);
             this.Controls.Add(this.lblBienvenue);
             this.Controls.Add(this.menuStrip1);
+            this.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.Name = "FrmResponsable";
             this.Text = "FrmResponsable";
             this.menuStrip1.ResumeLayout(false);

@@ -43,6 +43,7 @@ namespace Sprint3
             // 
             // menuStrip1
             // 
+            this.menuStrip1.ImageScalingSize = new System.Drawing.Size(32, 32);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.consultationToolStripMenuItem,
             this.saisieToolStripMenuItem});
@@ -59,7 +60,7 @@ namespace Sprint3
             this.ficheDuPraticienToolStripMenuItem,
             this.comtpesrendusToolStripMenuItem});
             this.consultationToolStripMenuItem.Name = "consultationToolStripMenuItem";
-            this.consultationToolStripMenuItem.Size = new System.Drawing.Size(87, 20);
+            this.consultationToolStripMenuItem.Size = new System.Drawing.Size(87, 22);
             this.consultationToolStripMenuItem.Text = "Consultation";
             // 
             // ficheDunProduitToolStripMenuItem
@@ -67,6 +68,7 @@ namespace Sprint3
             this.ficheDunProduitToolStripMenuItem.Name = "ficheDunProduitToolStripMenuItem";
             this.ficheDunProduitToolStripMenuItem.Size = new System.Drawing.Size(188, 22);
             this.ficheDunProduitToolStripMenuItem.Text = "Fiche du produit";
+            this.ficheDunProduitToolStripMenuItem.Click += new System.EventHandler(this.ficheDunProduitToolStripMenuItem_Click);
             // 
             // ficheDuPraticienToolStripMenuItem
             // 
@@ -86,7 +88,7 @@ namespace Sprint3
             this.saisieToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.nouveauRapportToolStripMenuItem});
             this.saisieToolStripMenuItem.Name = "saisieToolStripMenuItem";
-            this.saisieToolStripMenuItem.Size = new System.Drawing.Size(48, 20);
+            this.saisieToolStripMenuItem.Size = new System.Drawing.Size(48, 22);
             this.saisieToolStripMenuItem.Text = "Saisie";
             // 
             // nouveauRapportToolStripMenuItem

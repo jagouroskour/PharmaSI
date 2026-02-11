@@ -81,8 +81,9 @@ namespace Sprint3
 
                 // B. On remplit les Labels (Vérifie que tes labels ont bien ces noms !)
                 lblAdresse.Text = p.Adresse;
-                lblVille.Text = p.CP + " " + p.Ville;
+                lblVille.Text = p.Ville;
                 lblType.Text = p.TypePraticien;
+                lblCp.Text = p.CP;
                 // Si tu as créé un label pour la notoriété :
                 if (lblCoef != null) lblCoef.Text = p.CoefNotoriete.ToString();
 

@@ -29,5 +29,17 @@ namespace Sprint3
             this.DialogResult = DialogResult.OK;
             this.Close();
         }
+
+        private void ficheDunPraticienToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmConsulter frm = new FrmConsulter();
+            frm.ShowDialog();
+        }
+
+        private void ficheDunProduitToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmConsulterMedicament frm = new FrmConsulterMedicament();
+            frm.ShowDialog();
+        }
     }
 }
