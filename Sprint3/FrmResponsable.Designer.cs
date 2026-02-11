@@ -49,6 +49,7 @@ namespace Sprint3
             this.lblBienvenue.Size = new System.Drawing.Size(39, 36);
             this.lblBienvenue.TabIndex = 0;
             this.lblBienvenue.Text = "...";
+            this.lblBienvenue.Click += new System.EventHandler(this.lblBienvenue_Click);
             // 
             // btnDeconnexion
             // 

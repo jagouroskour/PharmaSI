@@ -168,6 +168,7 @@ namespace Sprint3
             this.dgvDetails.Name = "dgvDetails";
             this.dgvDetails.Size = new System.Drawing.Size(357, 95);
             this.dgvDetails.TabIndex = 13;
+            this.dgvDetails.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvDetails_CellContentClick);
             // 
             // cboPraticiens
             // 

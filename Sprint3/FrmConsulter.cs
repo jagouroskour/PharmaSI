@@ -134,5 +134,9 @@ namespace Sprint3
             this.Close();
         }
 
+        private void dgvDetails_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

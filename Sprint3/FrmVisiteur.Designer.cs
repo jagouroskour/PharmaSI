@@ -1,17 +1,10 @@
-﻿
+﻿// 1. FrmVisiteur.Designer.cs (Code corrigé)
 namespace Sprint3
 {
     partial class FrmVisiteur
     {
-        /// <summary>
-        /// Required designer variable.
-        /// </summary>
         private System.ComponentModel.IContainer components = null;
 
-        /// <summary>
-        /// Clean up any resources being used.
-        /// </summary>
-        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
         protected override void Dispose(bool disposing)
         {
             if (disposing && (components != null))
@@ -23,10 +16,6 @@ namespace Sprint3
 
         #region Windows Form Designer generated code
 
-        /// <summary>
-        /// Required method for Designer support - do not modify
-        /// the contents of this method with the code editor.
-        /// </summary>
         private void InitializeComponent()
         {
             this.lblBienvenue = new System.Windows.Forms.Label();
@@ -84,7 +73,7 @@ namespace Sprint3
             this.ficheDunPraticienToolStripMenuItem.Name = "ficheDunPraticienToolStripMenuItem";
             this.ficheDunPraticienToolStripMenuItem.Size = new System.Drawing.Size(188, 22);
             this.ficheDunPraticienToolStripMenuItem.Text = "Fiche du praticien";
-            this.ficheDunPraticienToolStripMenuItem.Click += new System.EventHandler(this.ficheDunPraticienToolStripMenuItem_Click_1);
+            this.ficheDunPraticienToolStripMenuItem.Click += new System.EventHandler(this.ficheDunPraticienToolStripMenuItem_Click);
             // 
             // comtpesrendusToolStripMenuItem
             // 
@@ -105,6 +94,7 @@ namespace Sprint3
             this.nouveauRapportToolStripMenuItem.Name = "nouveauRapportToolStripMenuItem";
             this.nouveauRapportToolStripMenuItem.Size = new System.Drawing.Size(164, 22);
             this.nouveauRapportToolStripMenuItem.Text = "Nouveau rapport";
+            this.nouveauRapportToolStripMenuItem.Click += new System.EventHandler(this.nouveauRapportToolStripMenuItem_Click);
             // 
             // btnDeconnexion
             // 
@@ -116,7 +106,7 @@ namespace Sprint3
             this.btnDeconnexion.TabIndex = 2;
             this.btnDeconnexion.Text = "Se déconnecter";
             this.btnDeconnexion.UseVisualStyleBackColor = false;
-            this.btnDeconnexion.Click += new System.EventHandler(this.btnDeconnexion_Click_1);
+            this.btnDeconnexion.Click += new System.EventHandler(this.btnDeconnexion_Click);
             // 
             // FrmVisiteur
             // 
@@ -132,7 +122,6 @@ namespace Sprint3
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "FrmVisiteur";
             this.Text = " ";
-            this.Load += new System.EventHandler(this.FrmVisiteur_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);

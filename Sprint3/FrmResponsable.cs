@@ -32,5 +32,10 @@ namespace Sprint3
             FrmConsulter frm = new FrmConsulter();
             frm.ShowDialog();
         }
+
+        private void lblBienvenue_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
