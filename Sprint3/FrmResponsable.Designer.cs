@@ -92,7 +92,6 @@ namespace Sprint3
             this.ficheDuProduitToolStripMenuItem.Name = "ficheDuProduitToolStripMenuItem";
             this.ficheDuProduitToolStripMenuItem.Size = new System.Drawing.Size(436, 44);
             this.ficheDuProduitToolStripMenuItem.Text = "Fiche du produit";
-            this.ficheDuProduitToolStripMenuItem.Click += new System.EventHandler(this.ficheDuProduitToolStripMenuItem_Click);
             // 
             // ficheDuPraticienToolStripMenuItem
             // 

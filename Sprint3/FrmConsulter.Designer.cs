@@ -44,7 +44,8 @@ namespace Sprint3
             this.cboPraticiens = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.btnDeconnexion = new System.Windows.Forms.Button();
-            this.label8 = new System.Windows.Forms.Label();
+            FrmConsulter frmConsulter = this;
+            frmConsulter.label8 = new System.Windows.Forms.Label();
             this.lblCp = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDetails)).BeginInit();
