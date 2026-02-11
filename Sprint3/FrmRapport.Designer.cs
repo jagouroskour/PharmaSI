@@ -35,6 +35,7 @@ namespace Sprint3
             this.ficheDunProduitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ficheDunPraticienToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.comtpesrendusToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.nouveauRapportToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.saisieToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.nouveauRapportToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.btnDeconnexion = new System.Windows.Forms.Button();
@@ -63,7 +64,6 @@ namespace Sprint3
             this.button3 = new System.Windows.Forms.Button();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.textBox2 = new System.Windows.Forms.TextBox();
-            this.nouveauRapportToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -120,6 +120,12 @@ namespace Sprint3
             this.comtpesrendusToolStripMenuItem.Size = new System.Drawing.Size(188, 22);
             this.comtpesrendusToolStripMenuItem.Text = "Mes Comtpes-rendus";
             // 
+            // nouveauRapportToolStripMenuItem1
+            // 
+            this.nouveauRapportToolStripMenuItem1.Name = "nouveauRapportToolStripMenuItem1";
+            this.nouveauRapportToolStripMenuItem1.Size = new System.Drawing.Size(188, 22);
+            this.nouveauRapportToolStripMenuItem1.Text = "Nouveau Rapport";
+            // 
             // saisieToolStripMenuItem
             // 
             this.saisieToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -131,7 +137,7 @@ namespace Sprint3
             // nouveauRapportToolStripMenuItem
             // 
             this.nouveauRapportToolStripMenuItem.Name = "nouveauRapportToolStripMenuItem";
-            this.nouveauRapportToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.nouveauRapportToolStripMenuItem.Size = new System.Drawing.Size(164, 22);
             this.nouveauRapportToolStripMenuItem.Text = "Nouveau rapport";
             // 
             // btnDeconnexion
@@ -144,6 +150,7 @@ namespace Sprint3
             this.btnDeconnexion.TabIndex = 5;
             this.btnDeconnexion.Text = "Se déconnecter";
             this.btnDeconnexion.UseVisualStyleBackColor = false;
+            this.btnDeconnexion.Click += new System.EventHandler(this.BtnDeconnexion_Click);
             // 
             // pictureBox1
             // 
@@ -153,7 +160,6 @@ namespace Sprint3
             this.pictureBox1.Size = new System.Drawing.Size(268, 235);
             this.pictureBox1.TabIndex = 6;
             this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // label1
             // 
@@ -220,7 +226,6 @@ namespace Sprint3
             this.label6.Size = new System.Drawing.Size(122, 19);
             this.label6.TabIndex = 12;
             this.label6.Text = "Produit (max 2) :";
-            this.label6.Click += new System.EventHandler(this.label6_Click);
             // 
             // label7
             // 
@@ -358,6 +363,7 @@ namespace Sprint3
             this.button2.TabIndex = 26;
             this.button2.Text = "Réinitialiser";
             this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.Button2_Click_1);
             // 
             // textBox1
             // 
@@ -375,8 +381,9 @@ namespace Sprint3
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(96, 42);
             this.button3.TabIndex = 28;
-            this.button3.Text = "Fermer";
+            this.button3.Text = "Retour";
             this.button3.UseVisualStyleBackColor = false;
+            this.button3.Click += new System.EventHandler(this.Button3_Click_1);
             // 
             // dateTimePicker1
             // 
@@ -393,12 +400,6 @@ namespace Sprint3
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(314, 62);
             this.textBox2.TabIndex = 30;
-            // 
-            // nouveauRapportToolStripMenuItem1
-            // 
-            this.nouveauRapportToolStripMenuItem1.Name = "nouveauRapportToolStripMenuItem1";
-            this.nouveauRapportToolStripMenuItem1.Size = new System.Drawing.Size(188, 22);
-            this.nouveauRapportToolStripMenuItem1.Text = "Nouveau Rapport";
             // 
             // FrmRapport
             // 
