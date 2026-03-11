@@ -1,6 +1,9 @@
 ﻿using System;
 using System.Windows.Forms;
 using MySql.Data.MySqlClient; // Indispensable pour MySQL
+using System.Security.Cryptography; // Nécessaire pour le hachage SHA-256
+using System.Text; // Pour l'encodage des caractères
+
 
 namespace Sprint3 // Vérifiez que cela correspond bien à votre projet
 {
@@ -25,9 +28,110 @@ namespace Sprint3 // Vérifiez que cela correspond bien à votre projet
             // On laisse vide pour l'instant, c'est juste pour que l'erreur disparaisse
         }
 
+        //code ajouter pour le hachage
+        private string HacherMdp(string password)
+        {
+            using (SHA256 sha256Hash = SHA256.Create())
+            {
+                // On transforme la chaîne en tableau d'octets
+                byte[] bytes = sha256Hash.ComputeHash(Encoding.UTF8.GetBytes(password));
+
+                // On convertit le tableau d'octets en chaîne hexadécimale
+                StringBuilder builder = new StringBuilder();
+                for (int i = 0; i < bytes.Length; i++)
+                {
+                    builder.Append(bytes[i].ToString("x2"));
+                }
+                return builder.ToString();
+            }
+        }
+
+
+        private void btnConnexion_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                maConnexionSql = ConnexionSql.getInstance(provider, dataBase, uid, mdp);
+                maConnexionSql.OpenConnexion();
+
+                // --- SÉCURITÉ SPRINT 5 : HACHAGE DU MDP SAISI ---
+                string mdpSaisiHache = HacherMdp(txtMdp.Text);
+
+                // On compare le login et le hash produit avec ceux de la BDD
+                string sql = "SELECT * FROM employe WHERE login = @login AND motDePasse = @motDePasse";
+                maRequete = maConnexionSql.reqExec(sql);
+                maRequete.Parameters.AddWithValue("@login", txtLogin.Text);
+                maRequete.Parameters.AddWithValue("@motDePasse", mdpSaisiHache);
+
+                MySqlDataReader monReader = maRequete.ExecuteReader();
+
+                bool connexionOk = false;
+                string nom = "";
+                string prenom = "";
+                int grade = 0;
+
+                if (monReader.Read())
+                {
+                    connexionOk = true;
+                    nom = monReader["nom"].ToString();
+                    prenom = monReader["prenom"].ToString();
+                    grade = int.Parse(monReader["idGrade"].ToString());
+                }
+
+                monReader.Close();
+                maConnexionSql.CloseConnexion();
+
+                if (connexionOk)
+                {
+                    this.Hide();
+                    DialogResult resultat = DialogResult.Cancel;
+
+                    if (grade == 1)
+                    {
+                        FrmVisiteur frm = new FrmVisiteur(prenom + " " + nom);
+                        resultat = frm.ShowDialog();
+                    }
+                    else if (grade == 2)
+                    {
+                        FrmDelegue frm = new FrmDelegue(prenom + " " + nom);
+                        resultat = frm.ShowDialog();
+                    }
+                    else if (grade == 3)
+                    {
+                        FrmResponsable frm = new FrmResponsable(prenom + " " + nom);
+                        resultat = frm.ShowDialog();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Accès non autorisé pour ce profil.");
+                        this.Show();
+                        return;
+                    }
+
+                    if (resultat == DialogResult.OK)
+                    {
+                        txtLogin.Text = "";
+                        txtMdp.Text = "";
+                        this.Show();
+                    }
+                    else
+                    {
+                        this.Close();
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Erreur login/mot de passe.");
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
 
         // C'est cette méthode qui s'active quand on clique sur le bouton
-        private void btnConnexion_Click(object sender, EventArgs e)
+        /*private void btnConnexion_Click(object sender, EventArgs e)
         {
             try
             {
@@ -119,7 +223,7 @@ namespace Sprint3 // Vérifiez que cela correspond bien à votre projet
             {
                 MessageBox.Show(ex.Message);
             }
-        }
+        }*/
 
         private void PictureBox1_Click(object sender, EventArgs e)
         {
