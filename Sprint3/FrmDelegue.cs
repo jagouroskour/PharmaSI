@@ -40,6 +40,15 @@ namespace Sprint3
         {
             FrmConsulterMedicament frm = new FrmConsulterMedicament();
             frm.ShowDialog();
+
+        }
+
+        private void mesComptesRendusToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            // Instanciation de la Form2 (votre page de consultation des rapports)
+            Form2 frm = new Form2();
+            // Affichage de la fenêtre en mode dialogue
+            frm.ShowDialog();
         }
     }
 }
