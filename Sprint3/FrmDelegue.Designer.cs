@@ -35,7 +35,7 @@ namespace Sprint3
             this.lblBienvenue.AutoSize = true;
             this.lblBienvenue.BackColor = System.Drawing.Color.Transparent;
             this.lblBienvenue.Font = new System.Drawing.Font("Microsoft YaHei UI", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblBienvenue.Location = new System.Drawing.Point(571, 97);
+            this.lblBienvenue.Location = new System.Drawing.Point(703, 98);
             this.lblBienvenue.Name = "lblBienvenue";
             this.lblBienvenue.Size = new System.Drawing.Size(39, 36);
             this.lblBienvenue.TabIndex = 0;
@@ -49,7 +49,7 @@ namespace Sprint3
             this.saisieToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1166, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(1453, 24);
             this.menuStrip1.TabIndex = 1;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -60,7 +60,7 @@ namespace Sprint3
             this.ficheDuPraticienToolStripMenuItem,
             this.comtpesrendusToolStripMenuItem});
             this.consultationToolStripMenuItem.Name = "consultationToolStripMenuItem";
-            this.consultationToolStripMenuItem.Size = new System.Drawing.Size(87, 22);
+            this.consultationToolStripMenuItem.Size = new System.Drawing.Size(87, 20);
             this.consultationToolStripMenuItem.Text = "Consultation";
             // 
             // ficheDunProduitToolStripMenuItem
@@ -88,7 +88,7 @@ namespace Sprint3
             this.saisieToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.nouveauRapportToolStripMenuItem});
             this.saisieToolStripMenuItem.Name = "saisieToolStripMenuItem";
-            this.saisieToolStripMenuItem.Size = new System.Drawing.Size(48, 22);
+            this.saisieToolStripMenuItem.Size = new System.Drawing.Size(48, 20);
             this.saisieToolStripMenuItem.Text = "Saisie";
             // 
             // nouveauRapportToolStripMenuItem
@@ -102,7 +102,7 @@ namespace Sprint3
             // 
             this.btnDeconnexion.BackColor = System.Drawing.Color.OrangeRed;
             this.btnDeconnexion.Font = new System.Drawing.Font("Microsoft YaHei", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDeconnexion.Location = new System.Drawing.Point(40, 487);
+            this.btnDeconnexion.Location = new System.Drawing.Point(63, 563);
             this.btnDeconnexion.Name = "btnDeconnexion";
             this.btnDeconnexion.Size = new System.Drawing.Size(135, 45);
             this.btnDeconnexion.TabIndex = 2;
@@ -117,7 +117,7 @@ namespace Sprint3
             this.BackColor = System.Drawing.Color.White;
             this.BackgroundImage = global::Sprint3.Properties.Resources.equipements_de_sante_et_fournitures_de_bureau_avec_plante_succulente_sur_fond_vert;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1166, 605);
+            this.ClientSize = new System.Drawing.Size(1453, 666);
             this.Controls.Add(this.btnDeconnexion);
             this.Controls.Add(this.lblBienvenue);
             this.Controls.Add(this.menuStrip1);

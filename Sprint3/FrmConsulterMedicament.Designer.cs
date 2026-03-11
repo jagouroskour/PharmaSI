@@ -49,7 +49,7 @@ namespace Sprint3
             // 
             this.cboMedicaments.BackColor = System.Drawing.SystemColors.ScrollBar;
             this.cboMedicaments.FormattingEnabled = true;
-            this.cboMedicaments.Location = new System.Drawing.Point(415, 36);
+            this.cboMedicaments.Location = new System.Drawing.Point(673, 134);
             this.cboMedicaments.Margin = new System.Windows.Forms.Padding(2);
             this.cboMedicaments.Name = "cboMedicaments";
             this.cboMedicaments.Size = new System.Drawing.Size(182, 21);
@@ -61,7 +61,7 @@ namespace Sprint3
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Microsoft YaHei", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(359, 93);
+            this.label1.Location = new System.Drawing.Point(617, 191);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(60, 17);
@@ -73,7 +73,7 @@ namespace Sprint3
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Microsoft YaHei", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(359, 130);
+            this.label2.Location = new System.Drawing.Point(617, 228);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(94, 17);
@@ -85,7 +85,7 @@ namespace Sprint3
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Microsoft YaHei", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(359, 162);
+            this.label3.Location = new System.Drawing.Point(617, 260);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(50, 17);
@@ -97,7 +97,7 @@ namespace Sprint3
             this.label4.AutoSize = true;
             this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("Microsoft YaHei", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(359, 198);
+            this.label4.Location = new System.Drawing.Point(617, 296);
             this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(129, 17);
@@ -109,7 +109,7 @@ namespace Sprint3
             this.label5.AutoSize = true;
             this.label5.BackColor = System.Drawing.Color.Transparent;
             this.label5.Font = new System.Drawing.Font("Microsoft YaHei", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(359, 225);
+            this.label5.Location = new System.Drawing.Point(617, 323);
             this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(39, 17);
@@ -122,7 +122,7 @@ namespace Sprint3
             this.lblFamille.BackColor = System.Drawing.Color.Transparent;
             this.lblFamille.Font = new System.Drawing.Font("Microsoft YaHei", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblFamille.ForeColor = System.Drawing.Color.Gray;
-            this.lblFamille.Location = new System.Drawing.Point(604, 93);
+            this.lblFamille.Location = new System.Drawing.Point(862, 191);
             this.lblFamille.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblFamille.Name = "lblFamille";
             this.lblFamille.Size = new System.Drawing.Size(17, 16);
@@ -135,7 +135,7 @@ namespace Sprint3
             this.lblComposition.BackColor = System.Drawing.Color.Transparent;
             this.lblComposition.Font = new System.Drawing.Font("Microsoft YaHei", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblComposition.ForeColor = System.Drawing.Color.Gray;
-            this.lblComposition.Location = new System.Drawing.Point(604, 130);
+            this.lblComposition.Location = new System.Drawing.Point(862, 228);
             this.lblComposition.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblComposition.Name = "lblComposition";
             this.lblComposition.Size = new System.Drawing.Size(17, 16);
@@ -148,7 +148,7 @@ namespace Sprint3
             this.lblEffets.BackColor = System.Drawing.Color.Transparent;
             this.lblEffets.Font = new System.Drawing.Font("Microsoft YaHei", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblEffets.ForeColor = System.Drawing.Color.Gray;
-            this.lblEffets.Location = new System.Drawing.Point(604, 162);
+            this.lblEffets.Location = new System.Drawing.Point(862, 260);
             this.lblEffets.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblEffets.Name = "lblEffets";
             this.lblEffets.Size = new System.Drawing.Size(17, 16);
@@ -161,7 +161,7 @@ namespace Sprint3
             this.lblContreIndic.BackColor = System.Drawing.Color.Transparent;
             this.lblContreIndic.Font = new System.Drawing.Font("Microsoft YaHei", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblContreIndic.ForeColor = System.Drawing.Color.Gray;
-            this.lblContreIndic.Location = new System.Drawing.Point(604, 198);
+            this.lblContreIndic.Location = new System.Drawing.Point(862, 296);
             this.lblContreIndic.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblContreIndic.Name = "lblContreIndic";
             this.lblContreIndic.Size = new System.Drawing.Size(17, 16);
@@ -174,7 +174,7 @@ namespace Sprint3
             this.lblPrix.BackColor = System.Drawing.Color.Transparent;
             this.lblPrix.Font = new System.Drawing.Font("Microsoft YaHei", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblPrix.ForeColor = System.Drawing.Color.Gray;
-            this.lblPrix.Location = new System.Drawing.Point(604, 225);
+            this.lblPrix.Location = new System.Drawing.Point(862, 323);
             this.lblPrix.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblPrix.Name = "lblPrix";
             this.lblPrix.Size = new System.Drawing.Size(17, 16);
@@ -184,7 +184,7 @@ namespace Sprint3
             // dgvInteractions
             // 
             this.dgvInteractions.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvInteractions.Location = new System.Drawing.Point(303, 257);
+            this.dgvInteractions.Location = new System.Drawing.Point(561, 355);
             this.dgvInteractions.Margin = new System.Windows.Forms.Padding(2);
             this.dgvInteractions.Name = "dgvInteractions";
             this.dgvInteractions.RowHeadersWidth = 82;
@@ -194,13 +194,17 @@ namespace Sprint3
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(48, 391);
+            this.button1.BackColor = System.Drawing.Color.Red;
+            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Location = new System.Drawing.Point(64, 579);
             this.button1.Margin = new System.Windows.Forms.Padding(2);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(64, 22);
+            this.button1.Size = new System.Drawing.Size(89, 35);
             this.button1.TabIndex = 12;
             this.button1.Text = "Retour";
-            this.button1.UseVisualStyleBackColor = true;
+            this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // FrmConsulterMedicament
@@ -209,7 +213,7 @@ namespace Sprint3
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::Sprint3.Properties.Resources.equipements_de_sante_et_fournitures_de_bureau_avec_plante_succulente_sur_fond_vert;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1078, 621);
+            this.ClientSize = new System.Drawing.Size(1449, 666);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.dgvInteractions);
             this.Controls.Add(this.lblPrix);
