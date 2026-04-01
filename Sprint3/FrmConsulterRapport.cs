@@ -154,5 +154,17 @@ namespace Sprint3
         {
             this.BringToFront();
         }
+
+        private void InitializeComponent()
+        {
+            this.SuspendLayout();
+            // 
+            // FrmConsulterRapport
+            // 
+            this.ClientSize = new System.Drawing.Size(702, 460);
+            this.Name = "FrmConsulterRapport";
+            this.ResumeLayout(false);
+
+        }
     }
 }
