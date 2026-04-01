@@ -84,6 +84,7 @@ namespace Sprint3
             this.consultationToolStripMenuItem.Name = "consultationToolStripMenuItem";
             this.consultationToolStripMenuItem.Size = new System.Drawing.Size(87, 22);
             this.consultationToolStripMenuItem.Text = "Consultation";
+            this.consultationToolStripMenuItem.Click += new System.EventHandler(this.consultationToolStripMenuItem_Click);
             // 
             // ficheDuProduitToolStripMenuItem
             // 
@@ -96,7 +97,6 @@ namespace Sprint3
             this.ficheDuPraticienToolStripMenuItem.Name = "ficheDuPraticienToolStripMenuItem";
             this.ficheDuPraticienToolStripMenuItem.Size = new System.Drawing.Size(216, 22);
             this.ficheDuPraticienToolStripMenuItem.Text = "Fiche du praticien";
-            this.ficheDuPraticienToolStripMenuItem.Click += new System.EventHandler(this.ficheDuPraticienToolStripMenuItem_Click_1);
             // 
             // compterendusDuSecteurToolStripMenuItem
             // 

@@ -1,5 +1,4 @@
-﻿// 2. FrmVisiteur.cs (Code C# associé)
-using System;
+﻿using System;
 using System.Windows.Forms;
 
 namespace Sprint3
@@ -33,6 +32,13 @@ namespace Sprint3
         private void ficheDunProduitToolStripMenuItem_Click(object sender, EventArgs e)
         {
             FrmConsulterMedicament frm = new FrmConsulterMedicament();
+            frm.ShowDialog();
+        }
+
+        // ✅ CORRIGÉ : handler qui était vide
+        private void comtpesrendusToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form2 frm = new Form2();
             frm.ShowDialog();
         }
     }

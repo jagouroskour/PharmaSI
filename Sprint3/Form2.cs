@@ -23,66 +23,98 @@ namespace Sprint3
             try
             {
                 maConnexionSql.OpenConnexion();
-                string sql = $@"SELECT r.idRapport, CONCAT(DATE_FORMAT(r.dateRapport, '%d/%m/%Y'), ' - ', p.nom_praticien) AS affichage
-                    FROM rapport_visite r JOIN praticien p ON r.idPraticien = p.id_praticien
-                    WHERE r.idVisiteur = {idConnecte} OR r.idVisiteur IN (SELECT idEmploye FROM employe WHERE idResponsable = {idConnecte})
-                    ORDER BY r.dateRapport DESC";
+
+                string sql = $@"
+                    SELECT r.id_rapport,
+                           CONCAT(
+                               DATE_FORMAT(r.date_rapport, '%d/%m/%Y'),
+                               ' - ',
+                               p.nom_praticien, ' ', p.prenom_praticien
+                           ) AS affichage
+                    FROM rapport_visite r
+                    JOIN praticien p ON r.id_praticien = p.id_praticien
+                    WHERE r.id_visiteur = {idConnecte}
+                       OR r.id_visiteur IN (
+                           SELECT idEmploye 
+                           FROM employe 
+                           WHERE idResponsable = {idConnecte}
+                       )
+                    ORDER BY r.date_rapport DESC";
 
                 MySqlDataReader reader = maConnexionSql.reqExec(sql).ExecuteReader();
                 DataTable dt = new DataTable();
                 dt.Load(reader);
+                reader.Close();
+
                 cboRapports.DataSource = dt;
                 cboRapports.DisplayMember = "affichage";
-                cboRapports.ValueMember = "idRapport";
+                cboRapports.ValueMember = "id_rapport";
                 cboRapports.SelectedIndex = -1;
-                reader.Close();
+
                 maConnexionSql.CloseConnexion();
             }
-            catch (Exception ex) { MessageBox.Show("Erreur : " + ex.Message); }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Erreur chargement rapports : " + ex.Message);
+            }
         }
 
         private void cboRapports_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (cboRapports.SelectedIndex == -1) return;
 
-            // Réinitialisation des labels
-            lblAuteurVal.Text = "-"; lblDateVal.Text = "-"; lblPraticienVal.Text = "-"; lblMotifVal.Text = "-";
+            // Réinitialisation des champs
+            lblAuteurVal.Text = "-";
+            lblDateVal.Text = "-";
+            lblPraticienVal.Text = "-";
+            lblMotifVal.Text = "-";
             txtBilan.Text = "";
-            lblProd1.Text = "-"; lblQte1.Text = "-";
-            lblProd2.Text = "-"; lblQte2.Text = "-";
+            lblProd1.Text = "-";
+            lblQte1.Text = "-";
+            lblProd2.Text = "-";
+            lblQte2.Text = "-";
 
             try
             {
                 maConnexionSql.OpenConnexion();
                 string idRapport = cboRapports.SelectedValue.ToString();
 
-                // 1. Infos du rapport
-                string sqlInfos = $@"SELECT r.dateRapport, r.motif, r.bilan, 
+                // 1. Informations du rapport
+                string sqlInfos = $@"
+                    SELECT r.date_rapport,
+                           mo.lib_motif          AS motif,
+                           r.bilan,
                            CONCAT(p.nom_praticien, ' ', p.prenom_praticien) AS praticien,
-                           CONCAT(e.nom, ' ', e.prenom) AS auteur, r.idVisiteur
+                           CONCAT(e.nom,          ' ', e.prenom)            AS auteur,
+                           r.id_visiteur
                     FROM rapport_visite r
-                    JOIN praticien p ON r.idPraticien = p.id_praticien
-                    JOIN employe e ON r.idVisiteur = e.idEmploye
-                    WHERE r.idRapport = {idRapport}";
+                    JOIN praticien p ON r.id_praticien = p.id_praticien
+                    JOIN employe   e ON r.id_visiteur  = e.idEmploye
+                    JOIN motif    mo ON r.id_motif     = mo.id_motif
+                    WHERE r.id_rapport = {idRapport}";
 
                 MySqlDataReader reader = maConnexionSql.reqExec(sqlInfos).ExecuteReader();
+
                 if (reader.Read())
                 {
-                    lblDateVal.Text = reader.GetDateTime("dateRapport").ToShortDateString();
+                    lblDateVal.Text = reader.GetDateTime("date_rapport").ToShortDateString();
                     lblMotifVal.Text = reader.GetString("motif");
                     lblPraticienVal.Text = reader.GetString("praticien");
                     txtBilan.Text = reader.GetString("bilan");
-                    int idAuteur = reader.GetInt32("idVisiteur");
-                    lblAuteurVal.Text = (idAuteur == idConnecte) ? "Vous-même" : reader.GetString("auteur");
+
+                    int idAuteur = reader.GetInt32("id_visiteur");
+                    lblAuteurVal.Text = (idAuteur == idConnecte)
+                                       ? "Vous-même"
+                                       : reader.GetString("auteur");
                 }
                 reader.Close();
 
-                // 2. Produits offerts (Logique adaptée pour Labels)
+                // 2. Produits offerts (max 2)
                 string sqlProduits = $@"
-                    SELECT pr.nom_commercial, o.quantite
+                    SELECT m.nom_commercial, o.quantite
                     FROM offrir o
-                    JOIN produit pr ON o.idMedicament = pr.depot_legal
-                    WHERE o.idRapport = {idRapport}";
+                    JOIN medicament m ON o.id_medicament = m.id_medicament
+                    WHERE o.id_rapport = {idRapport}";
 
                 MySqlDataReader readerProd = maConnexionSql.reqExec(sqlProduits).ExecuteReader();
 
@@ -98,7 +130,7 @@ namespace Sprint3
                         lblProd1.Text = nomProd;
                         lblQte1.Text = qteProd;
                     }
-                    else if (compteur == 2)
+                    else
                     {
                         lblProd2.Text = nomProd;
                         lblQte2.Text = qteProd;
@@ -109,7 +141,7 @@ namespace Sprint3
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message);
+                MessageBox.Show("Erreur affichage rapport : " + ex.Message);
             }
         }
 
@@ -120,9 +152,7 @@ namespace Sprint3
 
         private void consultationDeRapportToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            // Ouvre le formulaire de consultation
-            Form2 frmConsulter = new Form2();
-            frmConsulter.ShowDialog();
+            this.BringToFront();
         }
     }
 }
