@@ -184,7 +184,7 @@ namespace Sprint3
         private void BtnDeconnexion_Click(object sender, EventArgs e)
         {
             this.Hide();
-            new Form1().ShowDialog();
+            new FrmAccueil().ShowDialog();
             this.Close();
         }
 
@@ -192,7 +192,7 @@ namespace Sprint3
         private void comtpesrendusToolStripMenuItem_Click(object sender, EventArgs e)
         {
             // Ce code ouvre la consultation des rapports
-            Form2 frm = new Form2();
+            FrmConsulteRapport frm = new FrmConsulteRapport();
             frm.ShowDialog();
         }
 

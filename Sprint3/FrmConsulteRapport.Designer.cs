@@ -1,6 +1,6 @@
 ﻿namespace Sprint3
 {
-    partial class Form2
+    partial class FrmConsulteRapport
     {
         private System.ComponentModel.IContainer components = null;
 

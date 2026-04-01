@@ -46,7 +46,7 @@ namespace Sprint3
         private void mesComptesRendusToolStripMenuItem_Click(object sender, EventArgs e)
         {
             // Instanciation de la Form2 (votre page de consultation des rapports)
-            Form2 frm = new Form2();
+            FrmConsulteRapport frm = new FrmConsulteRapport();
             // Affichage de la fenêtre en mode dialogue
             frm.ShowDialog();
         }
