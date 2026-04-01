@@ -82,6 +82,7 @@ namespace Sprint3
             this.comtpesrendusToolStripMenuItem.Name = "comtpesrendusToolStripMenuItem";
             this.comtpesrendusToolStripMenuItem.Size = new System.Drawing.Size(188, 22);
             this.comtpesrendusToolStripMenuItem.Text = "Mes Comptes-rendus";
+            this.comtpesrendusToolStripMenuItem.Click += new System.EventHandler(this.comtpesrendusToolStripMenuItem_Click);
             // 
             // saisieToolStripMenuItem
             // 
