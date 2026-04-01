@@ -155,7 +155,7 @@ namespace Sprint3
             this.BringToFront();
         }
 
-        private void InitializeComponent()
+       private void InitializeComponent()
         {
             this.SuspendLayout();
             // 
