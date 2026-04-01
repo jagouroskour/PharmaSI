@@ -1,10 +1,6 @@
 ﻿namespace Sprint3
 {
-<<<<<<<< HEAD:Sprint3/FrmConsulterRapport.Designer.cs
-    partial class FrmConsulterRapport
-========
-    partial class FrmConsulteRapport
->>>>>>>> 8ab5603ff84fa0b70ec60848bf25bc3ef307bb0b:Sprint3/FrmConsulteRapport.Designer.cs
+    partial class Form2
     {
         private System.ComponentModel.IContainer components = null;
 

@@ -54,10 +54,10 @@ namespace Sprint3 // Vérifiez que cela correspond bien à votre projet
                 maConnexionSql = ConnexionSql.getInstance(provider, dataBase, uid, mdp);
                 maConnexionSql.OpenConnexion();
 
-                // --- SÉCURITÉ SPRINT 5 : HACHAGE DU MDP SAISI ---
+                //SÉCURITÉ SPRINT 5 : HACHAGE DU MDP
                 string mdpSaisiHache = HacherMdp(txtMdp.Text);
 
-                // On compare le login et le hash produit avec ceux de la BDD
+                //On compare le login et le hash produit avec ceux de la BDD
                 string sql = "SELECT * FROM employe WHERE login = @login AND motDePasse = @motDePasse";
                 maRequete = maConnexionSql.reqExec(sql);
                 maRequete.Parameters.AddWithValue("@login", txtLogin.Text);
