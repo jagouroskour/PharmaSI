@@ -1,7 +1,7 @@
 ﻿
 namespace Sprint3
 {
-    partial class Form1
+    partial class FrmAccueil
     {
         /// <summary>
         /// Variable nécessaire au concepteur.

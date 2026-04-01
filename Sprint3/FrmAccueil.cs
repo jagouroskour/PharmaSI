@@ -7,7 +7,7 @@ using System.Text; // Pour l'encodage des caractères
 
 namespace Sprint3 // Vérifiez que cela correspond bien à votre projet
 {
-    public partial class Form1 : Form
+    public partial class FrmAccueil : Form
     {
         // Propriétés de connexion (à adapter si vous avez un mot de passe root différent)
         private string provider = "localhost";
@@ -18,7 +18,7 @@ namespace Sprint3 // Vérifiez que cela correspond bien à votre projet
         private ConnexionSql maConnexionSql; // Instance de notre classe Singleton
         private MySqlCommand maRequete;      // Objet pour envoyer la requête
 
-        public Form1()
+        public FrmAccueil()
         {
             InitializeComponent();
         }

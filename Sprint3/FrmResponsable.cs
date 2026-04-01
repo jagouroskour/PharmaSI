@@ -5,37 +5,49 @@ namespace Sprint3
 {
     public partial class FrmResponsable : Form
     {
-        // 1. Constructeur
         public FrmResponsable(string nomComplet)
         {
             InitializeComponent();
             lblBienvenue.Text = "Bonjour " + nomComplet + " le responsable de secteur";
         }
 
-        // 2. Menu : Fiche praticien
-        // (Pareil, vérifie bien que l'événement est lié dans le designer)
         private void ficheDuPraticienToolStripMenuItem_Click(object sender, EventArgs e)
         {
             FrmConsulter frm = new FrmConsulter();
             frm.ShowDialog();
         }
 
-        // 3. Déconnexion
+        private void ficheDunProduitToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmConsulterMedicament frm = new FrmConsulterMedicament();
+            frm.ShowDialog();
+        }
+
+        private void nouveauRapportToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmRapport frmRapport = new FrmRapport();
+            frmRapport.ShowDialog();
+        }
+
+        // ✅ CORRIGÉ : handler ajouté (manquait complètement)
+        private void comtpesrendusToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmConsulterRapport frm = new FrmConsulterRapport();
+            frm.ShowDialog();
+        }
+
         private void btnDeconnexion_Click(object sender, EventArgs e)
         {
             this.DialogResult = DialogResult.OK;
             this.Close();
         }
 
-        private void ficheDuPraticienToolStripMenuItem_Click_1(object sender, EventArgs e)
-        {
-            FrmConsulter frm = new FrmConsulter();
-            frm.ShowDialog();
-        }
-
         private void lblBienvenue_Click(object sender, EventArgs e)
         {
+        }
 
+        private void consultationToolStripMenuItem_Click(object sender, EventArgs e)
+        {
         }
     }
 }

@@ -1,5 +1,4 @@
-﻿// 2. FrmDelegue.cs
-using System;
+﻿using System;
 using System.Windows.Forms;
 
 namespace Sprint3
@@ -40,14 +39,12 @@ namespace Sprint3
         {
             FrmConsulterMedicament frm = new FrmConsulterMedicament();
             frm.ShowDialog();
-
         }
 
-        private void mesComptesRendusToolStripMenuItem_Click(object sender, EventArgs e)
+        // ✅ OK : un seul handler suffit, suppression du doublon
+        private void comtpesrendusToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            // Instanciation de la Form2 (votre page de consultation des rapports)
-            Form2 frm = new Form2();
-            // Affichage de la fenêtre en mode dialogue
+            FrmConsulterRapport frm = new FrmConsulterRapport();
             frm.ShowDialog();
         }
     }
