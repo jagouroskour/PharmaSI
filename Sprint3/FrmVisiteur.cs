@@ -1,13 +1,16 @@
-﻿using System;
+using System;
 using System.Windows.Forms;
 
 namespace Sprint3
 {
     public partial class FrmVisiteur : Form
     {
-        public FrmVisiteur(string nomComplet)
+        private int idEmploye;
+
+        public FrmVisiteur(string nomComplet, int idEmploye)
         {
             InitializeComponent();
+            this.idEmploye = idEmploye;
             lblBienvenue.Text = "Bonjour " + nomComplet + " le visiteur médical";
         }
 
@@ -35,10 +38,9 @@ namespace Sprint3
             frm.ShowDialog();
         }
 
-        // ✅ CORRIGÉ : handler qui était vide
         private void comtpesrendusToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            FrmConsulterRapport frm = new FrmConsulterRapport();
+            FrmConsulterRapport frm = new FrmConsulterRapport(idEmploye);
             frm.ShowDialog();
         }
     }

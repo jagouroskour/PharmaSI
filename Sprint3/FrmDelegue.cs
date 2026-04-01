@@ -1,19 +1,28 @@
-﻿using System;
+using System;
 using System.Windows.Forms;
 
 namespace Sprint3
 {
     public partial class FrmDelegue : Form
     {
-        public FrmDelegue(string nomComplet)
+        private int idEmploye;
+
+        public FrmDelegue(string nomComplet, int idEmploye)
         {
             InitializeComponent();
+            this.idEmploye = idEmploye;
             lblBienvenue.Text = "Bonjour " + nomComplet + " le délégué régional";
         }
 
         private void ficheDuPraticienToolStripMenuItem_Click(object sender, EventArgs e)
         {
             FrmConsulter frm = new FrmConsulter();
+            frm.ShowDialog();
+        }
+
+        private void ficheDunProduitToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmConsulterMedicament frm = new FrmConsulterMedicament();
             frm.ShowDialog();
         }
 
@@ -29,22 +38,9 @@ namespace Sprint3
             this.Close();
         }
 
-        private void ficheDunPraticienToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            FrmConsulter frm = new FrmConsulter();
-            frm.ShowDialog();
-        }
-
-        private void ficheDunProduitToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            FrmConsulterMedicament frm = new FrmConsulterMedicament();
-            frm.ShowDialog();
-        }
-
-        // ✅ OK : un seul handler suffit, suppression du doublon
         private void comtpesrendusToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            FrmConsulterRapport frm = new FrmConsulterRapport();
+            FrmConsulterRapport frm = new FrmConsulterRapport(idEmploye);
             frm.ShowDialog();
         }
     }
